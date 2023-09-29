@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Home: React.FC = () => {
+const ArtistDetails: React.FC = () => {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
+      <h1>ArtistDetails Page</h1>
+      <p>Welcome to the ArtistDetails page!</p>
     </div>
   );
 };
 
-export default Home;
+export default ArtistDetails;

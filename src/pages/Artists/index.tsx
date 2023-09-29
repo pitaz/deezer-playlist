@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home: React.FC = () => {
+const Artists: React.FC = () => {
   return (
     <div>
       <h1>Artist Page</h1>
@@ -9,4 +9,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Artists;
