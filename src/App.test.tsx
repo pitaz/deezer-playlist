@@ -8,6 +8,6 @@ test('renders the Home component', () => {
       <App />
   );
 
-  const textElement = screen.getByText(/Artist Page/i);
+  const textElement = screen.getByTestId('artist-list');
   expect(textElement).toBeInTheDocument();
 });
