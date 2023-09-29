@@ -7,7 +7,7 @@ test('renders Navbar component', () => {
   render(<Navbar />);
   
   const navbarElement = screen.getByTestId('navbar');
-  const logoElement = screen.getByText('Logo');
+  const logoElement = screen.getByText('Deezer');
   const searchInput = screen.getByPlaceholderText('Search');
   
   expect(navbarElement).toBeInTheDocument();
