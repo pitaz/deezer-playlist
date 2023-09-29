@@ -46,6 +46,17 @@ plugins:
   eslint:
     enabled: true
     channel: "eslint-6"
+    prepare:
+  fetch:
+    - url: "https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64"
+      path: "/usr/local/bin/cc-test-reporter"
+      chmod: +x
+  ignore:
+    - "**/node_modules/**"
+    - "**/coverage/**"
+  coverage:
+    range: 80..100
+    precision: 2
 #   rubocop:
 #     enabled: true
 #     channel: "rubocop-0-79"
