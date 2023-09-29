@@ -1,4 +1,3 @@
-// ArtistCard.tsx
 import React from 'react';
 import './index.scss';
 

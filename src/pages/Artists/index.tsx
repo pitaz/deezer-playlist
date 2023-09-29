@@ -4,7 +4,7 @@ import ArtistCard from "../../component/ArtistCard";
 
 const Artists: React.FC = () => {
   return (
-    <div className="artists">
+    <div className="artists" data-testid="artist-list">
       {Array.from(Array(10)).map((item, index) => (
         <ArtistCard
           key={index}
