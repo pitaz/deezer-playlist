@@ -1,10 +1,18 @@
-import React from 'react';
+import React from "react";
+import './index.scss'
+import ArtistCard from "../../component/ArtistCard";
 
 const Artists: React.FC = () => {
   return (
-    <div id="header">
-      <h1 >Home Page</h1>
-      <p>Welcome to the artist page!</p>
+    <div className="artists">
+      {Array.from(Array(10)).map((item, index) => (
+        <ArtistCard
+          key={index}
+          artistName="John Doe"
+          imageSrc="https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          numberOfFans={10000}
+        />
+      ))}
     </div>
   );
 };
