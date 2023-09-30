@@ -13,6 +13,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/:id",
-    element: <ArtistDetails />,
+    element: <ArtistDetails id="" />,
   },
 ]);
