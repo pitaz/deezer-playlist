@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.artist-details-container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.artist-info {
+ width: 70%;
+ position: relative;
+}
+
+.artist-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.artist-text {
+  margin-left: 20px;
+  position: absolute;
+  top: 10px;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+
+.artist-music {
+  flex-grow: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.artist-albums {
+  padding: 20px;
+  margin-top: 30px;
+  width: 80%;
+}
+
+
+.album-card {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  width: 250px;
+
+  img {
+    width: 250px;
+  }
+}
+
+.album-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.4rem;
+}
