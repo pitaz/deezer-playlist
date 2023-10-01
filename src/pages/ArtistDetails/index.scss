@@ -16,26 +16,31 @@
 }
 
 .artist-info {
- width: 70%;
- position: relative;
-}
+  width: 70%;
+  position: relative;
+ }
+
 
 .artist-image img {
   width: 100%;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
 }
 
 .artist-text {
+  background-color: rgba(51, 51, 51, 0.5) ;
   margin-left: 20px;
   position: absolute;
+  padding: 20px;
   top: 10px;
 
   h1 {
     font-size: 2.5rem;
+    color: white;
   }
   p {
     font-size: 2rem;
+    color: white;
   }
 }
 
@@ -64,6 +69,7 @@ li {
   flex-direction: column;
   margin: 16px;
   width: 250px;
+  height: 400px;
 
   img {
     width: 250px;
@@ -74,4 +80,28 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.4rem;
+}
+
+.track-list-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.album-title {                
+  text-overflow: ellipsis;
+}
+
+ 
+@media (max-width: 768px) {
+  .artist-details-container {
+    flex-direction: column;
+  }
+  .artist-info {
+    width: 100%;
+   }
+   .artist-albums {
+    padding: 20px;
+    margin-top: 30px;
+    width: 100%;
+  }
 }

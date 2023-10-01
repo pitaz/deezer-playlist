@@ -1,14 +1,18 @@
 // ArtistCard.test.tsx
-import React from 'react';
-import { render } from '@testing-library/react';
-import ArtistCard from './';
+import React from "react";
+import { render } from "@testing-library/react";
+import ArtistCard from "./";
 
-test('renders ArtistCard component', () => {
+test("renders ArtistCard component", () => {
   const { container } = render(
     <ArtistCard
       imageSrc="image.jpg"
       artistName="John Doe"
-      numberOfFans={1000}
+      title="Love the way you lie"
+      handleClick={function (artistId: number): void {
+        throw new Error("Function not implemented.");
+      }}
+      id={0}
     />
   );
 

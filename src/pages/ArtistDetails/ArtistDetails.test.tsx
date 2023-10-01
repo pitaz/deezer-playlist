@@ -1,10 +1,12 @@
 // ArtistDetails.test.tsx
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { Provider } from "react-redux";
 import ArtistDetails from './';
+import store from '../../store';
 
 test('renders ArtistDetails component with content', () => {
-  render(<ArtistDetails />);
+  render( <Provider store={store}><ArtistDetails /></Provider>);
 
   const artistDetailsComponent = screen.getByTestId('artist-details');
   expect(artistDetailsComponent).toBeInTheDocument();

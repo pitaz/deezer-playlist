@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import './index.scss'
 import ArtistCard from "../../component/ArtistCard";
+import { RootState } from "../../store";
+import { fetchArtistInfo } from '../../store/actions/artistsActions';
+import Loader from "../../component/Loader";
+import { useNavigate, useNavigation } from "react-router-dom";
 
 const Artists: React.FC = () => {
+  const dispatch = useDispatch<any>();
+  const { searchResults, loading } = useSelector((state: RootState) => state.artists);
+  const navigate = useNavigate();
+
+  const handleArtistClick = (artistId: number) => {
+    navigate(`/artist/${artistId}`)
+  };
+
+  if(loading) {
+   return <Loader />;
+  }
+
   return (
     <div className="artists" data-testid="artist-list">
-      {Array.from(Array(10)).map((item, index) => (
+      {searchResults?.data?.map((item: any, index: number) => (
         <ArtistCard
           key={index}
-          artistName="John Doe"
-          imageSrc="https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          numberOfFans={10000}
+          id={item.artist.id}
+          artistName={item.artist.name}
+          imageSrc={item.artist.picture_medium}
+          title={item.title_short}
+          handleClick={() =>handleArtistClick(item.artist.id)}
         />
       ))}
     </div>

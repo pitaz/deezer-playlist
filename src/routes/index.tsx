@@ -8,11 +8,11 @@ import ArtistDetails from "../pages/ArtistDetails";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/artists",
     element: <Artists />,
   },
   {
-    path: "/:id",
-    element: <ArtistDetails id="" />,
+    path: "/artist/:id",
+    element: <ArtistDetails />,
   },
 ]);
