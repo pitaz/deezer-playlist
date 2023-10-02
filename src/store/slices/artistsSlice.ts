@@ -4,10 +4,10 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface ArtistsState {
   searchResults: SearchResults;
-  selectedArtist: any | null;
+  selectedArtist: Artist | null;
   loading: boolean;
-  topTracks: any;
-  albums: any;
+  topTracks: Track[];
+  albums: Album[];
 }
 
 export const initialState: ArtistsState = {
@@ -17,8 +17,8 @@ export const initialState: ArtistsState = {
     total: 0
   },
   selectedArtist: null,
-  topTracks: null,
-  albums: null,
+  topTracks: [],
+  albums: [],
   loading: false,
 };
 

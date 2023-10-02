@@ -1,4 +1,4 @@
-import { truncateString } from './truncate'; // Replace with the actual path to your truncateString file
+import { truncateString } from './truncate';
 
 describe('truncateString', () => {
   it('does not truncate if the string length is less than or equal to the max length', () => {
@@ -8,7 +8,6 @@ describe('truncateString', () => {
   });
 
   it('truncates the string and adds ellipsis if it exceeds the max length', () => {
-    // expect(truncateString('This is a long string', 10)).toBe('This is a...');
     expect(truncateString('A very long sentence that goes on and on', 20)).toBe(
       'A very long sentence...'
     );

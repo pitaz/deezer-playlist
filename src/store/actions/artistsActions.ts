@@ -24,6 +24,18 @@ export const searchArtists = (query: string) => async (dispatch: Dispatch) => {
   }
 };
 
+export const handlenext = (url: string) => async (dispatch: Dispatch) => {
+  try {
+    dispatch(searchArtistsStart());
+    const artists = await axios.get(`https://api.allorigins.win/raw?url=${url}`);
+    console.log('artists :>> ', artists);
+    dispatch(searchArtistsSuccess(artists.data));
+  } catch (error) {
+    dispatch(searchArtistsFailure());
+    console.error('Error searching artists:', error);
+  }
+};
+
 export const fetchArtistInfo = (artistId: string) => async (dispatch: Dispatch) => {
   try {
     const response = await axios.get(`https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${artistId}`);
