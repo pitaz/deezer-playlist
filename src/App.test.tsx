@@ -12,6 +12,6 @@ test('renders the Home component', () => {
       </Provider>
   );
 
-  const textElement = screen.getByTestId('artist-list');
+  const textElement = screen.getByTestId('navbar');
   expect(textElement).toBeInTheDocument();
 });

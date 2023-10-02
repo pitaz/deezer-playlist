@@ -1,4 +1,3 @@
-// artistDetailsActions.ts
 import { Dispatch } from 'redux';
 import {
   fetchArtistDetailsStart,
@@ -15,7 +14,7 @@ export const fetchArtistDetails = (artistId: string) => {
       const artistDetails = response.data; // Adjust this to match your API response structure
       dispatch(fetchArtistDetailsSuccess(artistDetails));
     } catch (error) {
-      // dispatch(fetchArtistDetailsFailure(error?.message));
+      dispatch(fetchArtistDetailsFailure(error as string));
     }
   };
 };

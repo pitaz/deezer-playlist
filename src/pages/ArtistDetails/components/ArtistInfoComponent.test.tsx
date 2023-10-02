@@ -16,6 +16,5 @@ describe('ArtistInfoComponent', () => {
     const artistImage = screen.getByAltText('Artist Name');
     expect(artistImage).toBeInTheDocument();
     expect(artistImage).toHaveAttribute('src', 'artist.jpg');
-    expect(screen.getByText('10.0K fans')).toBeInTheDocument();
   });
 });

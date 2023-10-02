@@ -19,7 +19,7 @@ Sentry.init({
 function App() {
   return (
     <Provider store={store}>
-      <Navbar />
+      <Navbar  data-testid="navbar"/>
       <RouterProvider router={router} />
     </Provider>
   );

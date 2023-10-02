@@ -4,6 +4,6 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.tsx'],
   coverageReporters: ['lcov', 'text-summary'],
   transformIgnorePatterns: [
-    '/node_modules/(?!untransformed-module/)',
+    '/node_modules/(?!axios/)',
   ],
 };
