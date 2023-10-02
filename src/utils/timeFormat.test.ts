@@ -1,4 +1,4 @@
-import { secondsToMinutesAndSeconds } from './timeFormat'; // Replace with the actual path to your secondsToMinutesAndSeconds file
+import { secondsToMinutesAndSeconds } from './timeFormat';
 
 describe('secondsToMinutesAndSeconds', () => {
   it('converts seconds to minutes and seconds format', () => {

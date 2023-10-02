@@ -1,11 +1,10 @@
-// artistDetailsSlice.ts
+
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../';
 
 interface ArtistDetails {
   id: number;
   name: string;
-  // Add more artist details as needed
 }
 
 interface ArtistDetailsState {
